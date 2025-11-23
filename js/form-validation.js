@@ -1,4 +1,4 @@
-// Валидация формы контактов
+
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     
@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = this.querySelector('textarea');
             let isValid = true;
             
-            // Валидация имени
             if (name.value.trim() === '') {
                 showError(name, 'Пожалуйста, введите ваше имя');
                 isValid = false;
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearError(name);
             }
             
-            // Валидация email
             if (email.value.trim() === '') {
                 showError(email, 'Пожалуйста, введите ваш email');
                 isValid = false;
@@ -30,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearError(email);
             }
             
-            // Валидация сообщения
             if (message.value.trim() === '') {
                 showError(message, 'Пожалуйста, введите ваше сообщение');
                 isValid = false;
@@ -39,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (isValid) {
-                // Имитация отправки формы
                 const submitBtn = this.querySelector('button[type="submit"]');
                 const originalText = submitBtn.textContent;
                 
@@ -55,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Функция показа ошибки
         function showError(input, message) {
             clearError(input);
             input.style.borderColor = '#e74c3c';
@@ -71,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
             input.parentNode.insertBefore(errorDiv, input.nextSibling);
         }
         
-        // Функция очистки ошибки
         function clearError(input) {
             input.style.borderColor = '#e9ecef';
             const error = input.parentNode.querySelector('.error-message');
@@ -80,13 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Функция проверки email
         function isValidEmail(email) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
         }
         
-        // Очистка ошибок при вводе
         const inputs = contactForm.querySelectorAll('input, textarea');
         inputs.forEach(input => {
             input.addEventListener('input', function() {
