@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - DesignStudio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="DesignStudio">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portfolio-hero">
+            <div class="container">
+                <h1>Наши пушистые проекты</h1>
+                <p>Дизайнерские работы, вдохновленные нашими любимыми котиками</p>
+            </div>
+        </section>
+
+        <section class="portfolio-filter">
+            <div class="container">
+                <button class="filter-btn active" data-filter="all">Все работы</button>
+                <button class="filter-btn" data-filter="branding">Брендинг</button>
+                <button class="filter-btn" data-filter="illustration">Иллюстрации</button>
+                <button class="filter-btn" data-filter="web">Веб-дизайн</button>
+            </div>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="container">
+                <!-- Проект 1 -->
+                <div class="portfolio-item" data-category="branding">
+                    <img src="images/portfolio/project1.jpg" alt="Бренд кошачьего кафе">
+                    <div class="portfolio-content">
+                        <h3>Whiskers Café</h3>
+                        <p>Брендинг для уютного кошачьего кафе. Разработали логотип, фирменный стиль и упаковку.</p>
+                        <span class="portfolio-category">Брендинг</span>
+                    </div>
+                </div>
+
+                <!-- Проект 2 -->
+                <div class="portfolio-item" data-category="illustration">
+                    <img src="images/portfolio/project2.jpg" alt="Серия иллюстраций с котиками">
+                    <div class="portfolio-content">
+                        <h3>Кошачьи истории</h3>
+                        <p>Серия иллюстраций для детской книги о приключениях котенка по имени Барсик.</p>
+                        <span class="portfolio-category">Иллюстрации</span>
+                    </div>
+                </div>
+
+                <!-- Проект 3 -->
+                <div class="portfolio-item" data-category="web">
+                    <img src="images/portfolio/project3.jpg" alt="Сайт зоомагазина">
+                    <div class="portfolio-content">
+                        <h3>CatShop Online</h3>
+                        <p>Дизайн интернет-магазина товаров для кошек. Удобный интерфейс и приятная цветовая гамма.</p>
+                        <span class="portfolio-category">Веб-дизайн</span>
+                    </div>
+                </div>
+
+                <!-- Проект 4 -->
+                <div class="portfolio-item" data-category="branding">
+                    <img src="images/portfolio/project4.jpg" alt="Упаковка корма для кошек">
+                    <div class="portfolio-content">
+                        <h3>Purrfect Food</h3>
+                        <p>Дизайн упаковки для премиального корма для кошек. Яркий и запоминающийся дизайн.</p>
+                        <span class="portfolio-category">Брендинг</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-cta">
+            <div class="container">
+                <h2>Хотите такой же милый дизайн?</h2>
+                <p>Мы создадим уникальный дизайн, который будет таким же очаровательным, как эти котики!</p>
+                <a href="contact.html" class="btn">Обсудить проект</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DesignStudio. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/portfolio-filter.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
